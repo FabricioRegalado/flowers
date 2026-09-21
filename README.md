@@ -9,16 +9,23 @@ npm install
 npm run dev
 ```
 
-## Deploy en GitHub Pages
+## Deploy en GitHub Pages desde una rama
 
-El proyecto incluye una GitHub Action en `.github/workflows/deploy.yml`.
+El comando `npm run deploy` construye `dist` y publica su contenido en la rama `gh-pages`.
 
 1. Crea un repositorio en GitHub y sube este proyecto a la rama `main`.
-2. En GitHub abre `Settings > Pages`.
-3. En `Build and deployment`, selecciona `GitHub Actions` como fuente.
-4. Cada push a `main` construirá y publicará automáticamente el sitio.
+2. Ejecuta `npm run deploy` desde la carpeta del proyecto.
+3. En GitHub abre `Settings > Pages`.
+4. En `Build and deployment`, selecciona `Deploy from a branch`.
+5. Selecciona la rama `gh-pages` y la carpeta `/ (root)`.
+6. Pulsa `Save` y espera unos minutos.
 
-La configuración calcula automáticamente la ruta del repositorio para que los assets de Vite funcionen en GitHub Pages.
+La URL será `https://TU_USUARIO.github.io/flowers/`.
+Si tu repositorio no se llama `flowers`, ejecuta el deploy con su ruta correspondiente:
+
+```powershell
+$env:VITE_BASE_PATH='/NOMBRE_DEL_REPOSITORIO/'; npm run deploy
+```
 
 ## Comandos
 
