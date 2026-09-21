@@ -404,6 +404,15 @@ blockquote {
   }
 }
 
+@media (max-height: 500px) {
+  .is-intro .intro-copy { top: 8%; }
+
+  .is-intro .garden {
+    width: min(72vw, 360px);
+    transform: translate(-50%, -34%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
