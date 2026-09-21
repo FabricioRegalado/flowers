@@ -41,6 +41,25 @@
   transform: translateX(-50%);
 }
 
+.is-intro .stage {
+  display: block;
+  height: 100dvh;
+  min-height: 100dvh;
+  padding: 0;
+  overflow: hidden;
+}
+
+.is-intro .intro-copy { top: 17%; }
+
+.is-intro .garden {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(88vw, 560px);
+  margin: 0;
+  transform: translate(-50%, -43%);
+}
+
 .hint {
   margin: 0;
   color: #706b60;
@@ -351,7 +370,7 @@ blockquote {
 
 @media (max-width: 767px) {
   .stage { padding: 4vh 5vw 7vh; }
-  .intro-copy { top: 12%; }
+  .is-intro .intro-copy { top: 18%; }
   .garden { width: min(95vw, 470px); margin-top: 4vh; }
   .ground-line { bottom: 10%; }
 
@@ -377,6 +396,12 @@ blockquote {
   }
 
   .is-complete .ground-line { bottom: 8%; }
+
+  .is-intro .garden {
+    width: min(88vw, 470px);
+    margin: 0;
+    transform: translate(-50%, -42%);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
